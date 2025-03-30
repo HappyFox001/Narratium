@@ -1,0 +1,12 @@
+history.json
+test/compression/results
+test/compression/results/*
+test/autogenerate/result.txt
+graphrag/cache
+graphrag/logs
+graphrag/output
+graphrag/prompts
+graphrag/.env
+.env
+README_DB.md
+__pycache__
