@@ -1,0 +1,21 @@
+{
+  "original_story_length": 1584,
+  "models_tested": 1,
+  "embedding_model": "all-minilm:7b-q4_0",
+  "timestamp": "2025-03-24 21:07:00",
+  "results": [
+    {
+      "model": "gemma3:2b-it-q4_0",
+      "compression_time": 0.00541996955871582,
+      "evaluation": {
+        "original_length": 1584,
+        "compressed_length": 1584,
+        "compression_ratio": 1.0,
+        "semantic_similarity": 0.0,
+        "quality_score": 0.0,
+        "embedding_time": 0.005222797393798828
+      },
+      "compressed_text": "\n                In a small village nestled among rolling hills, there lived a baker named Marco. Marco was famous for his sourdough bread, \n                which had a perfect crust and a soft, airy interior. People from neighboring towns would travel miles just to buy his bread.\n                On..."
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --primary: #8b5cf6;
+  --primary-dark: #7c3aed;
+  --primary-light: #a78bfa;
+  --secondary: #ec4899;
+  --secondary-dark: #db2777;
+  --secondary-light: #f472b6;
+  --accent: #10b981;
+  --accent-dark: #059669;
+
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-alt: 'Raleway', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Courier New', monospace;
+
+  --font-sans-cn: 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', 'STHeiti', 'SimHei', sans-serif;
+  --font-heading-cn: 'SimSun', 'STSong', 'Songti SC', serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+html[lang="zh"] body {
+  font-family: var(--font-sans-cn);
+}
+
+.font-cn-sans {
+  font-family: var(--font-sans-cn);
+}
+
+.font-cn-serif {
+  font-family: var(--font-heading-cn);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+html[lang="zh"] h1,
+html[lang="zh"] h2,
+html[lang="zh"] h3,
+html[lang="zh"] h4,
+html[lang="zh"] h5,
+html[lang="zh"] h6 {
+  font-family: var(--font-heading-cn);
+}
+
+.btn {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition-property: all;
+  transition-duration: 200ms;
+}
+
+.btn:focus {
+  outline: none;
+  --tw-ring-opacity: 0.5;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.btn-primary {
+  background-color: rgb(124 58 237);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(124, 58, 237, 0.1), 0 2px 4px -1px rgba(124, 58, 237, 0.06);
+}
+
+.btn-primary:hover {
+  background-color: rgb(109 40 217);
+  box-shadow: 0 10px 15px -3px rgba(124, 58, 237, 0.1), 0 4px 6px -2px rgba(124, 58, 237, 0.05);
+}
+
+.btn-primary:focus {
+  --tw-ring-color: rgba(139, 92, 246, var(--tw-ring-opacity));
+}
+
+.btn-secondary {
+  background-color: rgb(219 39 119);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(219, 39, 119, 0.1), 0 2px 4px -1px rgba(219, 39, 119, 0.06);
+}
+
+.btn-secondary:hover {
+  background-color: rgb(190 24 93);
+  box-shadow: 0 10px 15px -3px rgba(219, 39, 119, 0.1), 0 4px 6px -2px rgba(219, 39, 119, 0.05);
+}
+
+.btn-secondary:focus {
+  --tw-ring-color: rgba(236, 72, 153, var(--tw-ring-opacity));
+}
+
+.btn-outline {
+  border: 2px solid rgb(139, 92, 246);
+  color: rgb(139, 92, 246);
+}
+
+.btn-outline:hover {
+  background-color: rgba(139, 92, 246, 0.1);
+}
+
+.btn-outline:focus {
+  --tw-ring-color: rgba(139, 92, 246, var(--tw-ring-opacity));
+}
+
+.btn-rounded {
+  border-radius: 9999px;
+}
+
+.btn-lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.card {
+  background-color: rgba(31, 41, 55, 0.7);
+  border-radius: 0.75rem;
+  border: 1px solid rgb(55, 65, 81);
+  overflow: hidden;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.1), 0 4px 6px -2px rgba(139, 92, 246, 0.05);
+}
+
+.card-header {
+  padding: 1rem;
+  border-bottom: 1px solid rgb(55, 65, 81);
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.card-footer {
+  padding: 1rem;
+  border-top: 1px solid rgb(55, 65, 81);
+}
+
+.input {
+  background-color: rgb(31, 41, 55);
+  border: 1px solid rgb(55, 65, 81);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  width: 100%;
+  transition-property: all;
+  transition-duration: 200ms;
+}
+
+.input:focus {
+  outline: none;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-color: rgba(139, 92, 246, var(--tw-ring-opacity));
+  border-color: transparent;
+}
+
+.input-rounded {
+  border-radius: 9999px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(31, 41, 55, 0.5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.7);
+}
